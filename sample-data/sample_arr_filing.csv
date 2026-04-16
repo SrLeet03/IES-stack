@@ -1,0 +1,27 @@
+fiscal_year,year_type,amount_basis,serial_number,line_item_id,category,sub_category,head,amount,particulars,form_reference,component_of,formula
+FY 2023-24,BASE_YEAR,AUDITED,1,transmission-cost,FIXED,NETWORK_COST,Transmission Cost,873.52,,Form 1.1,network-and-sldc-cost,
+FY 2023-24,BASE_YEAR,AUDITED,2,sldc-cost,FIXED,NETWORK_COST,SLDC Cost,9.57,,Form 1.2,network-and-sldc-cost,
+FY 2023-24,BASE_YEAR,AUDITED,3,net-distribution-cost,FIXED,NETWORK_COST,Net Distribution Cost,1600.13,,Form 1.3,network-and-sldc-cost,
+FY 2023-24,BASE_YEAR,AUDITED,4,pgcil-expenses,FIXED,NETWORK_COST,Interstate Transmission Expenses,348.69,,,network-and-sldc-cost,
+FY 2023-24,BASE_YEAR,AUDITED,5,uldc-charges,FIXED,NETWORK_COST,Scheduling Charges,3.27,,,network-and-sldc-cost,
+FY 2023-24,BASE_YEAR,AUDITED,6,network-and-sldc-cost,SUB_TOTAL,NETWORK_COST,Network and SLDC Cost,2835.18,,,,transmission-cost + sldc-cost + net-distribution-cost + pgcil-expenses + uldc-charges
+FY 2023-24,BASE_YEAR,AUDITED,7,power-purchase-cost,VARIABLE,POWER_PURCHASE,Power Purchase Cost,26559.25,,Form 1.4,supply-cost,
+FY 2023-24,BASE_YEAR,AUDITED,8,distribution-cost-rsb,FIXED,O_AND_M,Distribution Cost - Supply Business,,,,supply-cost,
+FY 2023-24,BASE_YEAR,AUDITED,9,interest-csd,FIXED,INTEREST,Interest on Consumer Security Deposits,72.50,,Form 1.5,supply-cost,
+FY 2023-24,BASE_YEAR,AUDITED,10,supply-margin,FIXED,OTHER,Supply Margin in Retail Supply Business,13.67,,Form 1.6,supply-cost,
+FY 2023-24,BASE_YEAR,AUDITED,11,other-costs,FIXED,OTHER,Other Costs,9.56,,Form 1.7,supply-cost,
+FY 2023-24,BASE_YEAR,AUDITED,12,supply-cost,SUB_TOTAL,TOTAL,Supply Cost,26655.00,,,,power-purchase-cost + distribution-cost-rsb + interest-csd + supply-margin + other-costs
+FY 2023-24,BASE_YEAR,AUDITED,13,aggregate-arr,ARR,NET_ARR,Aggregate Revenue Requirement,29490.18,,,,network-and-sldc-cost + supply-cost
+FY 2024-25,CONTROL_PERIOD,PROPOSED,1,transmission-cost,FIXED,NETWORK_COST,Transmission Cost,920.00,,Form 1.1,network-and-sldc-cost,
+FY 2024-25,CONTROL_PERIOD,PROPOSED,2,sldc-cost,FIXED,NETWORK_COST,SLDC Cost,12.30,,Form 1.2,network-and-sldc-cost,
+FY 2024-25,CONTROL_PERIOD,PROPOSED,3,net-distribution-cost,FIXED,NETWORK_COST,Net Distribution Cost,1750.00,,Form 1.3,network-and-sldc-cost,
+FY 2024-25,CONTROL_PERIOD,PROPOSED,4,pgcil-expenses,FIXED,NETWORK_COST,Interstate Transmission Expenses,380.00,,,network-and-sldc-cost,
+FY 2024-25,CONTROL_PERIOD,PROPOSED,5,uldc-charges,FIXED,NETWORK_COST,Scheduling Charges,3.50,,,network-and-sldc-cost,
+FY 2024-25,CONTROL_PERIOD,PROPOSED,6,network-and-sldc-cost,SUB_TOTAL,NETWORK_COST,Network and SLDC Cost,3065.80,,,,transmission-cost + sldc-cost + net-distribution-cost + pgcil-expenses + uldc-charges
+FY 2024-25,CONTROL_PERIOD,PROPOSED,7,power-purchase-cost,VARIABLE,POWER_PURCHASE,Power Purchase Cost,28000.00,,Form 1.4,supply-cost,
+FY 2024-25,CONTROL_PERIOD,PROPOSED,8,distribution-cost-rsb,FIXED,O_AND_M,Distribution Cost - Supply Business,1200.00,,,supply-cost,
+FY 2024-25,CONTROL_PERIOD,PROPOSED,9,interest-csd,FIXED,INTEREST,Interest on Consumer Security Deposits,85.00,,Form 1.5,supply-cost,
+FY 2024-25,CONTROL_PERIOD,PROPOSED,10,supply-margin,FIXED,OTHER,Supply Margin in Retail Supply Business,15.00,,Form 1.6,supply-cost,
+FY 2024-25,CONTROL_PERIOD,PROPOSED,11,other-costs,FIXED,OTHER,Other Costs,12.00,,Form 1.7,supply-cost,
+FY 2024-25,CONTROL_PERIOD,PROPOSED,12,supply-cost,SUB_TOTAL,TOTAL,Supply Cost,29312.00,,,,power-purchase-cost + distribution-cost-rsb + interest-csd + supply-margin + other-costs
+FY 2024-25,CONTROL_PERIOD,PROPOSED,13,aggregate-arr,ARR,NET_ARR,Aggregate Revenue Requirement,32377.80,,,,network-and-sldc-cost + supply-cost

@@ -1,0 +1,79 @@
+{
+  "$id": "https://india-energy-stack.github.io/schemas/IES_ARR_Filing.schema.json",
+  "type": "object",
+  "required": ["objectType", "filingId", "licensee", "regulatoryCommission", "currency", "unitScale", "fiscalYears"],
+  "properties": {
+    "@context": { "type": "string" },
+    "objectType": { "type": "string", "enum": ["ARR_FILING"] },
+    "id": { "type": "string" },
+    "filingId": { "type": "string" },
+    "filingDate": { "type": "string", "format": "date" },
+    "filingType": {
+      "type": "string",
+      "enum": ["MYT", "ANNUAL", "TRUE_UP", "REVISED"]
+    },
+    "licensee": { "type": "string" },
+    "licenseeCode": { "type": "string" },
+    "stateProvince": { "type": "string" },
+    "regulatoryCommission": { "type": "string" },
+    "controlPeriodStart": { "type": "string" },
+    "controlPeriodEnd": { "type": "string" },
+    "currency": { "type": "string", "default": "INR", "enum": ["INR"] },
+    "unitScale": { "type": "string", "default": "CRORE", "enum": ["CRORE", "LAKH", "ABSOLUTE"] },
+    "status": {
+      "type": "string",
+      "enum": ["DRAFT", "SUBMITTED", "UNDER_REVIEW", "APPROVED", "REJECTED"]
+    },
+    "formReference": { "type": "string" },
+    "notes": { "type": "array", "items": { "type": "string" } },
+    "fiscalYears": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["fiscalYear", "amountBasis", "lineItems"],
+        "properties": {
+          "fiscalYear": { "type": "string" },
+          "yearType": {
+            "type": "string",
+            "enum": ["BASE_YEAR", "CONTROL_PERIOD", "HISTORICAL"]
+          },
+          "amountBasis": {
+            "type": "string",
+            "enum": ["AUDITED", "APPROVED", "PROPOSED", "TRUED_UP", "NOT_FILED"]
+          },
+          "lineItems": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "object",
+              "required": ["lineItemId", "category", "head", "amount"],
+              "properties": {
+                "lineItemId": { "type": "string" },
+                "serialNumber": { "type": "integer" },
+                "category": {
+                  "type": "string",
+                  "enum": ["VARIABLE", "FIXED", "INCOME", "SUB_TOTAL", "ARR", "ADJUSTMENT"]
+                },
+                "subCategory": {
+                  "type": "string",
+                  "enum": [
+                    "POWER_PURCHASE", "NETWORK_COST", "O_AND_M", "DEPRECIATION",
+                    "INTEREST", "RETURN_ON_EQUITY", "PROVISIONAL", "OTHER",
+                    "NON_TARIFF_INCOME", "REVENUE_CREDIT", "TOTAL", "NET_ARR"
+                  ]
+                },
+                "head": { "type": "string" },
+                "particulars": { "type": "string" },
+                "amount": { "type": ["number", "null"] },
+                "formReference": { "type": "string" },
+                "componentOf": { "type": "string" },
+                "formula": { "type": "string" }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

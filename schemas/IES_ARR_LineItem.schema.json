@@ -1,0 +1,52 @@
+{
+  "$id": "https://india-energy-stack.github.io/schemas/IES_ARR_LineItem.schema.json",
+  "type": "object",
+  "required": ["lineItemId", "category", "head", "amount"],
+  "properties": {
+    "lineItemId": {
+      "type": "string",
+      "description": "Unique identifier for this line item within the filing.",
+      "example": "transmission-cost"
+    },
+    "serialNumber": {
+      "type": "integer",
+      "description": "Serial number as shown in the regulatory form."
+    },
+    "category": {
+      "type": "string",
+      "enum": ["VARIABLE", "FIXED", "INCOME", "SUB_TOTAL", "ARR", "ADJUSTMENT"]
+    },
+    "subCategory": {
+      "type": "string",
+      "enum": [
+        "POWER_PURCHASE", "NETWORK_COST", "O_AND_M", "DEPRECIATION",
+        "INTEREST", "RETURN_ON_EQUITY", "PROVISIONAL", "OTHER",
+        "NON_TARIFF_INCOME", "REVENUE_CREDIT", "TOTAL", "NET_ARR"
+      ]
+    },
+    "head": {
+      "type": "string",
+      "description": "Short heading for the line item."
+    },
+    "particulars": {
+      "type": "string",
+      "description": "Detailed description of the line item."
+    },
+    "amount": {
+      "type": ["number", "null"],
+      "description": "Amount in the filing currency and unit scale."
+    },
+    "formReference": {
+      "type": "string",
+      "description": "Reference to supporting form or schedule."
+    },
+    "componentOf": {
+      "type": "string",
+      "description": "lineItemId of the subtotal this item feeds into."
+    },
+    "formula": {
+      "type": "string",
+      "description": "Computation formula as sum of other lineItemIds."
+    }
+  }
+}
